@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+
+  bcoin:
+    build:
+      context: ./bcoin
+    container_name: bcoin
+    ports:
+      #-- Regtest
+      - "48444:48444"
+      - "48332:48332" # RPC
+      - "48334:48334" # Wallet
